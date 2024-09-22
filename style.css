@@ -1,0 +1,135 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background: #2934b4;
+  background: linear-gradient(180deg, #2934b4 0%, #1a5cc1 80%);
+  font-family: sans-serif;
+}
+
+header {
+  width: 100%;
+  max-width: 1400px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(239, 252, 255, 0.45);
+}
+
+.header__form {
+  display: flex;
+  gap: 8px;
+}
+
+.header__logo {
+  color: #effcff;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.header__select {
+  padding: 8px;
+  outline: unset;
+  border: none;
+  border-radius: 24px;
+}
+
+.header__form button {
+  appearance: none;
+  outline: none;
+  background: #effcff;
+  padding-inline: 16px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  border-radius: 24px;
+  cursor: pointer;
+  background: transparent;
+  color: #effcff;
+  border: 1px solid #effcff;
+  transition: 300ms;
+}
+
+.header__form button:hover {
+  color: #2934b4;
+  background: #effcff;
+}
+
+main.weather {
+  width: 100%;
+  max-width: 1400px;
+  height: calc(100% - 72px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather__emptystate.weather__emptystate {
+  color: #effcff;
+  font-size: 48px;
+}
+
+.weather__emptystate.weather__emptystate--hidden {
+  display: none;
+}
+
+.weather__data.weather__data {
+  flex-grow: 1;
+}
+
+.weather__data.weather__data--hidden {
+  display: none;
+}
+
+.weather__location .weather__city {
+  all: initial;
+  color: #effcff;
+  font-size: 72px;
+  letter-spacing: -2px;
+}
+
+.weather__location .weather__date {
+  color: rgba(239, 252, 255, 0.65);
+  font-size: 32px;
+  margin-top: 4px;
+}
+
+.weather__info {
+  display: flex;
+}
+
+.weather__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.weather__left > div {
+  display: flex;
+}
+
+.weather__left .weather__value {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.weather__temperature {
+  color: #effcff;
+  font-size: 192px;
+}
+
+.weather__description {
+  color: rgba(239, 252, 255, 0.65);
+  font-size: 48px;
+}
+
+.weather__description::first-letter {
+  text-transform: uppercase;
+}
+
+.weather__right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
