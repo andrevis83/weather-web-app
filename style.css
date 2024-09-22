@@ -3,7 +3,7 @@ body {
   margin: 0;
   height: 100vh;
   background: #2934b4;
-  background: linear-gradient(180deg, #2934b4 0%, #1a5cc1 80%);
+  background: linear-gradient(45deg, #050939, #131c80);
   font-family: sans-serif;
   line-height: 1;
 }
@@ -81,6 +81,7 @@ main.weather {
   padding: 46px 56px 64px;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 32px;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .weather__data.weather__data--hidden {
@@ -88,7 +89,7 @@ main.weather {
 }
 
 .weather__location {
-  margin-bottom: 64px;
+  margin-bottom: 104px;
 }
 
 .weather__location .weather__city {
@@ -101,16 +102,16 @@ main.weather {
   color: rgba(239, 252, 255, 0.65);
   font-size: 32px;
   margin-top: 12px;
+  text-transform: capitalize;
 }
 
 .weather__info {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 64px;
 }
 
 .weather__left {
-  flex-grow: 0.25;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,11 +139,6 @@ main.weather {
   font-size: 32px;
 }
 
-.weather__value {
-  width: 72px;
-  height: auto;
-}
-
 .weather__description::first-letter {
   text-transform: uppercase;
 }
@@ -154,11 +150,11 @@ main.weather {
 }
 
 .weather__right {
-  flex-grow: 0.75;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-left: 12px;
-  gap: 40px;
+  column-gap: 80px;
+  row-gap: 60px;
 }
 
 .weather__right .weather__label {
