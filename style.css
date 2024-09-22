@@ -5,6 +5,7 @@ body {
   background: #2934b4;
   background: linear-gradient(180deg, #2934b4 0%, #1a5cc1 80%);
   font-family: sans-serif;
+  line-height: 1;
 }
 
 header {
@@ -77,37 +78,48 @@ main.weather {
 
 .weather__data.weather__data {
   flex-grow: 1;
+  padding: 46px 56px 64px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
 }
 
 .weather__data.weather__data--hidden {
   display: none;
 }
 
+.weather__location {
+  margin-bottom: 64px;
+}
+
 .weather__location .weather__city {
-  all: initial;
   color: #effcff;
   font-size: 72px;
-  letter-spacing: -2px;
+  margin: 0;
 }
 
 .weather__location .weather__date {
   color: rgba(239, 252, 255, 0.65);
   font-size: 32px;
-  margin-top: 4px;
+  margin-top: 12px;
 }
 
 .weather__info {
   display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .weather__left {
+  flex-grow: 0.25;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .weather__left > div {
   display: flex;
+  align-items: center;
 }
 
 .weather__left .weather__value {
@@ -118,18 +130,43 @@ main.weather {
 .weather__temperature {
   color: #effcff;
   font-size: 192px;
+  line-height: 0.75;
 }
 
 .weather__description {
   color: rgba(239, 252, 255, 0.65);
-  font-size: 48px;
+  font-size: 32px;
+}
+
+.weather__value {
+  width: 72px;
+  height: auto;
 }
 
 .weather__description::first-letter {
   text-transform: uppercase;
 }
 
+.weather__divider {
+  width: 2px;
+  background: rgba(239, 252, 255, 0.45);
+  margin-block: -20px;
+}
+
 .weather__right {
+  flex-grow: 0.75;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-left: 12px;
+  gap: 40px;
+}
+
+.weather__right .weather__label {
+  color: rgba(239, 252, 255, 0.65);
+  font-size: 20px;
+}
+
+.weather__right .weather__value {
+  color: #effcff;
+  font-size: 40px;
 }
